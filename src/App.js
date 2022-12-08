@@ -11,7 +11,7 @@ import { Ecommerce, Calendar, Stacked, Area, Bar, Line, Pie, Financial, ColorPic
 import './App.css';
 
 const App = () => {
-  // declarea the Sidebar
+  // declares the Sidebar
   const activeMenu= false;
   return (
     <div>
