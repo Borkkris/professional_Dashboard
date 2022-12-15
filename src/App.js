@@ -12,7 +12,7 @@ import './App.css';
 
 const App = () => {
   // declares the Sidebar
-  const activeMenu= false;
+  const activeMenu= true;
   return (
     <div>
       <BrowserRouter>
