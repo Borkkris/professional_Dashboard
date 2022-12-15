@@ -8,11 +8,14 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Ecommerce, Calendar, Stacked, Area, Bar, Line, Pie, Financial, ColorPicker, ColorMapping, Pyramid, Customers, Editor, Employees, Kanban, Orders } from './pages';
 
+import { useStateContext } from './contexts/ContextProvider';
+
 import './App.css';
 
 const App = () => {
-  // declares the Sidebar
-  const activeMenu= true;
+  // call it as a hook
+  const { activeMenu } = useStateContext();
+  
   return (
     <div>
       <BrowserRouter>
