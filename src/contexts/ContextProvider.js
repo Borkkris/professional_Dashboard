@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
 
+// in the Navbar
 const initialState = {
     chat: false,
     cart: false,
@@ -12,6 +13,15 @@ const initialState = {
 // is a basic react declare to return the statecontext provider 
 export const ContextProvider = ({ children }) => {
     const [activeMenu, setActiveMenu] = useState(true);
+    const [isClicked, setIsClicked] = useState(initialState)
+    const [screenSize, setScreenSize] = useState(undefined) // undefined because I dont knoe the screen Size yet
+
+    /** setIsClicked is an object (initialState) and we cannot just override the object with a string 
+     * -> so we need to open up the object spread the initialState meaning where everything is false 
+     * and then inside of square brackets only change the vsalue that has been clicked
+     * and set it to true 
+    */
+    const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
 
     return (
         <StateContext.Provider
@@ -20,6 +30,11 @@ export const ContextProvider = ({ children }) => {
             value={{ 
                 activeMenu,
                 setActiveMenu,
+                isClicked,
+                setIsClicked,
+                handleClick,
+                screenSize, 
+                setScreenSize
             }}
         >
             {/* always return children inside of it / whatever is inside the context will be displayed (rendered) */}
@@ -29,4 +44,4 @@ export const ContextProvider = ({ children }) => {
 }
 // passing in which context I want to use
 // one context in thisu app
-export const useStateContext = () => useContext (StateContext)
+export const useStateContext = () => useContext(StateContext)
