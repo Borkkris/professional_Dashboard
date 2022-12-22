@@ -14,7 +14,7 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
     const [activeMenu, setActiveMenu] = useState(true);
     const [isClicked, setIsClicked] = useState(initialState)
-    const [screenSize, setScreenSize] = useState(undefined) // undefined because I dont knoe the screen Size yet
+    const [screenSize, setScreenSize] = useState(undefined) // undefined because I dont know the screen Size yet
 
     /** setIsClicked is an object (initialState) and we cannot just override the object with a string 
      * -> so we need to open up the object spread the initialState meaning where everything is false 
