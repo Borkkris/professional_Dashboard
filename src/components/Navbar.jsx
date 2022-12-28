@@ -55,14 +55,14 @@ const Navbar = () => {
   },[screenSize]);
 
   return (
-    <div className="flex justify-between 
-    p-2 md:mx-6 relative">
+    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
       {/* first NavButton with a callback function to see if activeMenu is open, then we close it anf vice versa */}
       <NavButton 
         title="Menu" 
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} 
         color="blue" 
-        icon={<AiOutlineMenu />} />
+        icon={<AiOutlineMenu />} 
+      />
       
       <div className="flex">
         {/* Cart */}
