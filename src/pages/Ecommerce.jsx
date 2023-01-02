@@ -98,17 +98,33 @@ const Ecommerce = () => {
                   </p>
                   <p className="text-gray-500 mt-1"> Expanse </p>
               </div>
+              {/* div with the Sparkline-Chart from the SparkLine (Chart) Component */}
               <div className="mt-5">
                 <SparkLine
                   currentColor="blue"
                   id="line-sparkline"
-                  type="line"
+                  type="Line"
                   height="80px"
                   width="250px"
                   color="blue"
                   data={SparklineAreaData}
                 />
               </div>
+              {/* Div with a Button from the Button Component in it */}
+              <div className="mt-10">
+                  <Button
+                    color="white"
+                    bgColor="blue"
+                    text="Download report"
+                    borderRadius="10px" 
+                  />
+              </div>
+            </div>
+            <div>
+              <Stacked 
+                width="360px"
+                height="360px"
+              />
             </div>
           </div>
         </div>
