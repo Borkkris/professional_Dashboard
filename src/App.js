@@ -14,7 +14,7 @@ import './App.css';
 
 const App = () => {
   // call it as a hook
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
   
   return (
     <div>
@@ -23,11 +23,13 @@ const App = () => {
         <div className="flex relative dark:bg-main-dark-bg">
           <div 
             className="fixed right-4 bottom-4" 
-            style={{zIndex: '!000' }}>
+            style={{zIndex: '1000' }}>
             {/* displays "settings" by hovering  over the component */}
             <TooltipComponent 
-              content="settings" 
-              position="Top">
+              content="Settings" 
+              position="Top"
+              onClick={()=>setThemeSettings(true)}
+            >
               {/* text-3xl makes the icon bigger */}
               <button 
                 type="button" 
@@ -52,12 +54,12 @@ const App = () => {
           {/* navigationbar */}
           {/* to reduce repetetive code */}
           {/* apply all the styles and if the menu is active apply md:m1-72 and usually apply flex-2 */}
-          <div className={ `dark:bg-main-bg
-           bg-main-bg 
-           min-h-screen 
-           w-full 
-           ${activeMenu} ? 'md:m1-72' :'flex-2'}`
-          }>
+          <div className={
+            activeMenu
+            ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full  '
+            : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
+          }
+          >
             <div className="fixed md:static
              bg-main-bg
              dark:bg-main-dark-bg 
@@ -67,6 +69,9 @@ const App = () => {
             </div>
           {/* div for routing */}
             <div>
+
+              {themeSettings && <ThemeSettings />}
+
               <Routes>
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />} />

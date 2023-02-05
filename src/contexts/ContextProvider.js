@@ -13,8 +13,24 @@ const initialState = {
 // is a basic react declare to return the statecontext provider 
 export const ContextProvider = ({ children }) => {
     const [activeMenu, setActiveMenu] = useState(true);
-    const [isClicked, setIsClicked] = useState(initialState)
-    const [screenSize, setScreenSize] = useState(undefined) // undefined because I dont know the screen Size yet
+    const [isClicked, setIsClicked] = useState(initialState);
+    const [screenSize, setScreenSize] = useState(undefined); // undefined because I dont know the screen Size yet
+    const [currentColor, setCurrentColor] = useState('#03C9D7');
+    const [currentMode, setCurrentMode] = useState('Light');
+    const [themeSettings, setThemeSettings] = useState(false); // is this Sidebar ThemeSettings currently open or closed
+
+    
+    const setMode = (e) => {
+        setCurrentMode(e.target.value)
+    
+        localStorage.setItem('themeMode', e.target.value)
+    };
+
+    const setColor = (e) => {
+        setCurrentColor(e.target.value)
+    
+        localStorage.setItem('colorMode', e.target.value)
+    };
 
     /** setIsClicked is an object (initialState) and we cannot just override the object with a string 
      * -> so we need to open up the object spread the initialState meaning where everything is false 
@@ -28,13 +44,13 @@ export const ContextProvider = ({ children }) => {
             // value property passed to all of the components in this application
             // is our sidebar currently open or is it closed?
             value={{ 
-                activeMenu,
-                setActiveMenu,
-                isClicked,
-                setIsClicked,
+                activeMenu, setActiveMenu,
+                isClicked, setIsClicked,
                 handleClick,
-                screenSize, 
-                setScreenSize
+                screenSize, setScreenSize,
+                currentColor, setCurrentColor,
+                currentMode, setCurrentMode,
+                themeSettings, setThemeSettings
             }}
         >
             {/* always return children inside of it / whatever is inside the context will be displayed (rendered) */}
@@ -43,5 +59,5 @@ export const ContextProvider = ({ children }) => {
     )
 }
 // passing in which context I want to use
-// one context in thisu app
+// one context in this app
 export const useStateContext = () => useContext(StateContext)
