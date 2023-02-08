@@ -19,7 +19,7 @@
 <code>For training purposes, all data comes from a dummy data file</code>
 
 ## Repository-link:
-[professional_dashboard]([https://github.com/Borkkris/simple-js-app](https://github.com/Borkkris/professional_Dashboard))
+[professional_dashboard](https://github.com/Borkkris/professional_Dashboard)
 
 ## Deployed on <code>Netlify</code>:
 [Modern-Dashboard-Syncfusion](https://modern-dashboard-syncfusion.netlify.app)
