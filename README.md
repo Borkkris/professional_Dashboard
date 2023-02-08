@@ -23,3 +23,5 @@
 
 ## Deployed on <code>Netlify</code>:
 [Modern-Dashboard-Syncfusion](https://modern-dashboard-syncfusion.netlify.app)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
