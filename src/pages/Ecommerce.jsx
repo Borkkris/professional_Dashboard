@@ -13,10 +13,10 @@ const Ecommerce = () => {
 
   return (
     <div className="mt-12">
-      <div className="flex flex-wrap lg:flex-nowrap justify-center ">
-        <div className="bg-white dark:text-gray-200
-         dark:bg-secondary-dark-bg h-44 rounded-xl w-full 
-         lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+      <div className="flex  flex-wrap lg:flex-nowrap justify-center ">
+        <div className="bg-white dark:text-gray-200 
+        dark:bg-secondary-dark-bg h-44 rounded-xl w-full 
+        lg:w-80 p-8 pt-9 m-3 bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">  Earnings </p>
@@ -27,7 +27,6 @@ const Ecommerce = () => {
           {/* Button Component */}
           <Button 
             color="white"
-            bgColor="blue"
             text="Download"
             borderRadius="10px"
             size="md"
@@ -110,11 +109,9 @@ const Ecommerce = () => {
                   data={SparklineAreaData}
                 />
               </div>
-              {/* Div with a Button from the Button Component in it */}
               <div className="mt-10">
                   <Button
                     color="white"
-                    bgColor="blue"
                     text="Download report"
                     borderRadius="10px" 
                   />

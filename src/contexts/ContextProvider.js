@@ -1,3 +1,4 @@
+import { colGroup } from '@syncfusion/ej2-react-grids';
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
@@ -19,17 +20,18 @@ export const ContextProvider = ({ children }) => {
     const [currentMode, setCurrentMode] = useState('Light');
     const [themeSettings, setThemeSettings] = useState(false); // is this Sidebar ThemeSettings currently open or closed
 
-    
+    // setting it to  specific mode
     const setMode = (e) => {
         setCurrentMode(e.target.value)
-    
         localStorage.setItem('themeMode', e.target.value)
+        setThemeSettings(false);
     };
 
-    const setColor = (e) => {
-        setCurrentColor(e.target.value)
-    
-        localStorage.setItem('colorMode', e.target.value)
+    // setting it to a specific color
+    const setColor = (color) => {
+        setCurrentColor(color)
+        localStorage.setItem('colorMode', color)
+        setThemeSettings(false);
     };
 
     /** setIsClicked is an object (initialState) and we cannot just override the object with a string 
@@ -50,7 +52,9 @@ export const ContextProvider = ({ children }) => {
                 screenSize, setScreenSize,
                 currentColor, setCurrentColor,
                 currentMode, setCurrentMode,
-                themeSettings, setThemeSettings
+                themeSettings, setThemeSettings,
+                setColor, setMode,
+                initialState
             }}
         >
             {/* always return children inside of it / whatever is inside the context will be displayed (rendered) */}

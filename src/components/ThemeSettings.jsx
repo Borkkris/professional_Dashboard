@@ -11,12 +11,11 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const ThemeSettings = () => {
 
-  const  {setColor, setMode, currentMode, currentColor, setThemeSettings } = useStateContext();
-
+  const  { setColor, setMode, currentMode, currentColor, setThemeSettings } = useStateContext();
 
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
-      <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] w-400">
+      <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] w-400">
         <div className="flex justify-between item-center p-4 ml-4">
           <p className="font-semibold text-xl">Settings</p>
           <button
@@ -40,33 +39,33 @@ const ThemeSettings = () => {
               onChange = {setMode}
               checked={currentMode === 'Light'}
             />
-            <lable
+            <label
               htmlFor="light"
               className="ml-2 text-md courser-pointer"
             >
                 Light
-            </lable>
+            </label>
           </div>
           <div classname="mt-4">
             <input
               type="radio"
-              id="darh"
+              id="dark"
               name="theme"
               value="Dark"
               className="cursor-pointer"
               onChange = {setMode}
               checked={currentMode === 'Dark'}
             />
-            <lable
+            <label
               htmlFor="dark"
               className="ml-2 text-md courser-pointer"
             >
                 Dark
-            </lable>
+            </label>
           </div>
         </div>
         <div className="flex-col border-t-1 border-color p-4 ml-4">
-          <p className="font-semibold text-lg"> Theme Colors</p>
+          <p className="font-semibold text-lg"> Theme Colors </p>
           <div className="flex gap-3">
             {themeColors.map((item, index) => (
               <TooltipComponent 
@@ -74,13 +73,14 @@ const ThemeSettings = () => {
                 content={item.name}
                 position="TopCenter"
               >
-                <div classNAme="relative mt-2 cursor-pointer flex gap-5 items-center">
+                <div className="relative mt-2 cursor-pointer flex gap-5 items-center" key={item.name}>
                   <button
                     type="button"
-                    className="h-10 w-10 rounded-full curser-pointer"
-                    style={{backgroundColor: item.color}}
-                    omnClick = {() => setColor(item.color)}>
-                    <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'}`} />
+                    className="h-10 w-10 rounded-full cursor-pointer"
+                    style={{ backgroundColor: item.color }}
+                    onClick={() => setColor(item.color)}
+                  >
+                    <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'}`} />                  
                   </button>
                 </div>
 

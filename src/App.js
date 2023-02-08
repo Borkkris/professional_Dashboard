@@ -14,10 +14,10 @@ import './App.css';
 
 const App = () => {
   // call it as a hook
-  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
+  const { currentColor, currentMode, activeMenu, themeSettings, setThemeSettings } = useStateContext();
   
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : '' }>
       <BrowserRouter>
       {/* from tailwind */}
         <div className="flex relative dark:bg-main-dark-bg">
@@ -34,7 +34,7 @@ const App = () => {
               <button 
                 type="button" 
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white" 
-                style={{ background: 'blue', borderRadius: '50% '}}> 
+                style={{ background: currentColor, borderRadius: '50% '}}> 
                 <FiSettings />
               </button>
             </TooltipComponent>
