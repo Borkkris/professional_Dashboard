@@ -1,7 +1,7 @@
 # Modern Dashboard
 
 ## info:
-<code>Build and Deployed a React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More</code>
+<code>Build and Deployed a React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More using Syncfusion and TailwindCSS</code>
 
 ## Light Mode
 ![Screenshot Ecommerce_Light](src/data/modern-dashboard-light.png "Ecommerce Light")
