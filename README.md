@@ -1,29 +1,7 @@
 # Modern Dashboard
 
-## Light Mode
-![Screenshot Ecommerce_Light](src/data/modern-dashboard-light.png "Ecommerce Light")
-
-## Dark Mode
-![Screenshot Ecommerce_Dark](src/data/modern-dashboard-light.png "Ecommerce Dark")
-
 ## info:
-<code>Build and Deployed a React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More</code>
-
-## built with:
-<code>ReactJS</code>
-<code>TailwindCSS</code>
-<code>Syncfusion</code>
-<code>npm</code>
-
-## Data:
-<code>For training purposes, all data comes from a dummy data file</code>
-
-## Repository-link:
-[professional_dashboard]([https://github.com/Borkkris/simple-js-app](https://github.com/Borkkris/professional_Dashboard))
-
-## Deployed on <code>Netlify</code>:
-[Modern-Dashboard-Syncfusion](https://modern-dashboard-syncfusion.netlify.app)
-# Modern Dashboard
+<code>Build and Deployed a React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More using Syncfusion and TailwindCSS</code>
 
 ## Light Mode
 ![Screenshot Ecommerce_Light](src/data/modern-dashboard-light.png "Ecommerce Light")
@@ -31,9 +9,6 @@
 ## Dark Mode
 ![Screenshot Ecommerce_Dark](src/data/modern-dashboard-dark.png "Ecommerce Dark")
 
-## info:
-<code>Build and Deployed a React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More</code>
-
 ## built with:
 <code>ReactJS</code>
 <code>TailwindCSS</code>
@@ -44,7 +19,9 @@
 <code>For training purposes, all data comes from a dummy data file</code>
 
 ## Repository-link:
-[professional_dashboard]([https://github.com/Borkkris/simple-js-app](https://github.com/Borkkris/professional_Dashboard))
+[professional_dashboard](https://github.com/Borkkris/professional_Dashboard)
 
 ## Deployed on <code>Netlify</code>:
 [Modern-Dashboard-Syncfusion](https://modern-dashboard-syncfusion.netlify.app)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
