@@ -17,6 +17,7 @@ const { currentMode } = useStateContext();
       primaryXAxis={barPrimaryXAxis}
       primaryYAxis={barPrimaryYAxis}
       chartArea={{border: { width: 0 }}}
+      tooltip={{enable:true}}
       background={currentMode === 'Dark' ? '#33373E' : '#fff'}
     >
       <Inject services={[ ColumnSeries, Legend, Tooltip, Category, DataLabel ]}/>
