@@ -16,8 +16,9 @@ function filterValue(value) {
 }
 const returnValue = financialChartData.filter(filterValue);
 
-const Financial = () => {
-  const { currentMode } = useStateContext();
+class Financial extends React.PureComponent {
+  render(){
+    const {currentMode } = this.props;
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
@@ -49,5 +50,6 @@ const Financial = () => {
     </div>
   );
 };
+}
 
 export default Financial;
