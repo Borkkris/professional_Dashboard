@@ -22,6 +22,6 @@
 [professional_dashboard](https://github.com/Borkkris/professional_Dashboard)
 
 ## Deployed on <code>Netlify</code>:
-[Modern-Dashboard-Syncfusion](modern-dashboard-syncfusion.netlify.app)
+[Modern-Dashboard-Syncfusion]([modern-dashboard-syncfusion.netlify.app](https://modern-dashboard-syncfusion.netlify.app))
 
 <p align="right">(<a href="#top">back to top</a>)</p>
