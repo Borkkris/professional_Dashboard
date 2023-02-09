@@ -54,7 +54,7 @@ export const ContextProvider = ({ children }) => {
                 currentMode, setCurrentMode,
                 themeSettings, setThemeSettings,
                 setColor, setMode,
-                initialState
+                initialState,
             }}
         >
             {/* always return children inside of it / whatever is inside the context will be displayed (rendered) */}
