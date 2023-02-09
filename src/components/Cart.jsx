@@ -5,7 +5,9 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { useStateContext } from '../contexts/ContextProvider';
 import { cartData } from '../data/dummy';
 import { Button } from '.';
-import { Header } from  '.'
+import { click } from '@syncfusion/ej2-react-grids';
+
+
 
 const Cart = () => {
 
@@ -36,9 +38,13 @@ const Cart = () => {
                   <div className="flex gap-4 mt-2 items-center">
                     <p className="font-semibold text-lg">{item.price}</p>
                     <div className="flex items-center border-1 border-r-0 border-color rounded">
+                      <button>
                       <p className="p-2 border-r-1 dark:border-gray-600 border-color text-red-600"><AiOutlineMinus /></p>
+                      </button>
                       <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600">0</p>
+                      <button>
                       <p className="p-2 border-r-1 border-color dark:border-gray-600 text-green-600"><AiOutlinePlus /></p>
+                      </button>
                     </div>
                   </div>
                 </div>
