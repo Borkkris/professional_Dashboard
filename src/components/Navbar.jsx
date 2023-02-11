@@ -5,8 +5,9 @@ import { BsChatLeft } from 'react-icons/bs';
 import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+import { GoSearch } from 'react-icons/go'
 
-import avatar from '../data/avatar.jpg';
+import avatar2 from '../data/avatar2.jpg';
 import { Cart, Chat, Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -52,8 +53,10 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
-
-      <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />} />
+      <div className="flex">
+        <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />}  />
+        <NavButton title="Search" customFunc={()=>alert('currently not available')} color={currentColor} icon={<GoSearch />} />
+      </div>
       <div className="flex">
         {/* Cart */}
         <NavButton title="Cart" customFunc={() => handleClick('cart')} color={currentColor} icon={<FiShoppingCart />} /> 
@@ -69,13 +72,13 @@ const Navbar = () => {
           >
             <img
               className="rounded-full w-8 h-8"
-              src={avatar}
+              src={avatar2}
               alt="user-profile"
             />
             <p>
               <span className="text-gray-400 text-14">Hi,</span>{' '}
               <span className="text-gray-400 font-bold ml-1 text-14">
-                Michael
+                Lisa
               </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
