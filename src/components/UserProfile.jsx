@@ -15,7 +15,7 @@ const UserProfile = () => {
 
 
   return (
-    <div style={{borderWidth: '2px'}} className="nav-item absolute right-1 top-16 bg-white w-96 p-8 rounded-lg">
+    <div style={{borderWidth: '2px'}} className="nav-item absolute right-1 top-16 bg-white w-96 p-8 rounded-lg dark:bg-[#42464D]">
       <div className="flex justify-between items-center">
         <p className="font-semibold text-lg dark:text-gray-200">User Profile</p>
         <div className="flex">
